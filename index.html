@@ -74,7 +74,6 @@
                 background: #f4f8ff;
             }
             .a_submenu{
-                height: 400px;
                 width: 280px;
                 left: -70px;
                 top:55px;
@@ -91,6 +90,9 @@
             }
             ul.a_menu > li:hover ul.a_submenu{
                 display: block !important;
+            }
+            ul.a_submenu > li:hover{
+                background-color: #f4f8ff;
             }
             @media (min-width: 1400px) {
             .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -169,8 +171,28 @@
                                 <ul class="nav h-100 a_menu">
                                     <li class="nav-item pt-2 h-100 position-relative"style="cursor:pointer">
                                       <a class="nav-link h-75 pt-2 active bg-white text-primary rounded-1 mt-1 ps-5 pe-5 a_login" aria-current="page" href="#">Login</a>
-                                      <ul class="a_submenu  bg-white shadow-sm position-absolute d-none">
+                                      <ul class="nav flex-column a_submenu  bg-white shadow-sm position-absolute d-none">
                                         <div class="arrow-up"></div>
+                                        <li>
+                                            <a class="btn btn-link text-decoration-none" href="#">New Customer?</a>
+                                            <a class="btn btn-link text-decoration-none" href="#">Sign up</a>
+                                        </li>
+                                        <li class="nav-item border-bottom">
+                                            <a class="btn w-100 text-decoration-none text-start ps-4" href="#"><i class="fa-solid fa-circle-user me-3"></i>My Profile</a>
+                                        </li>
+                                        <li class="nav-item border-bottom">
+                                            <a class="btn w-100 text-decoration-none text-start ps-4" href="#"><i class="fa-solid fa-circle-user me-3"></i>My Profile</a>
+                                        </li>
+                                        <li class="nav-item border-bottom">
+                                            <a class="btn w-100 text-decoration-none text-start ps-4" href="#"><i class="fa-solid fa-circle-user me-3"></i>My Profile</a>
+                                        </li>
+                                        <li class="nav-item border-bottom">
+                                            <a class="btn w-100 text-decoration-none text-start ps-4" href="#"><i class="fa-solid fa-circle-user me-3"></i>My Profile</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a class="btn w-100 text-decoration-none text-start ps-4" href="#"><i class="fa-solid fa-circle-user me-3"></i>My Profile</a>
+                                        </li>
+                                        
                                       </ul>
                                     </li>
                                     <li class="nav-item pt-2 h-100">
