@@ -22,6 +22,9 @@
             header{
                 /* 36.21 */
                 /*this is a sample*/
+                /* 26/04/2025
+                    36:54 timecode
+                */
             }
             .a_header_top{
                 height: 60px;
@@ -69,6 +72,25 @@
             }
             .a_inputsearchhint a:hover{
                 background: #f4f8ff;
+            }
+            .a_submenu{
+                height: 400px;
+                width: 280px;
+                left: -70px;
+                top:55px;
+            }
+            .arrow-up {
+                width: 0; 
+                height: 0; 
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid #fff;
+                position: absolute;
+                top:-15px;
+                left: 120px;
+            }
+            ul.a_menu > li:hover ul.a_submenu{
+                display: block !important;
             }
             @media (min-width: 1400px) {
             .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -144,9 +166,12 @@
                                 </form>
                             </div>
                             <div class="col-5 a_tbdr h-100">
-                                <ul class="nav h-100">
-                                    <li class="nav-item pt-2 h-100">
-                                      <a class="nav-link h-100 text-white active" aria-current="page" href="#">Login</a>
+                                <ul class="nav h-100 a_menu">
+                                    <li class="nav-item pt-2 h-100 position-relative"style="cursor:pointer">
+                                      <a class="nav-link h-75 pt-2 active bg-white text-primary rounded-1 mt-1 ps-5 pe-5 a_login" aria-current="page" href="#">Login</a>
+                                      <ul class="a_submenu  bg-white shadow-sm position-absolute d-none">
+                                        <div class="arrow-up"></div>
+                                      </ul>
                                     </li>
                                     <li class="nav-item pt-2 h-100">
                                       <a class="nav-link h-100 text-white" href="#">Become a Seller</a>
