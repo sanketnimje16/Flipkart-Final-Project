@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             body{
-                font-family: 'Roboto',Arial, sans-serif;
+                font-family: 'Roboto',Arial, sans-serif !important;
             }
             .a_tbdr{
                 border: 1px dashed red;
@@ -24,6 +24,9 @@
                 /*this is a sample*/
                 /* 26/04/2025
                     36:54 timecode
+
+                    06/05/2025
+                    L - 42 
                 */
             }
             .a_header_top{
@@ -92,7 +95,34 @@
                 display: block !important;
             }
             ul.a_submenu > li:hover{
-                background-color: #f4f8ff;
+                background-color: #fafafa; 
+            }
+            .a_bottom_menu > li{
+                position: relative;
+            }
+            .a_bottom_menu > li:hover > ul{
+                display: block !important;
+            }
+            .a_bottom_submenu{
+                width: 430px;
+                height: 450px;
+                z-index: 1000;
+                left: -150px;
+                top: 95px;
+            }
+            .a_bottom_submenu_submenu > li:hover > ul{
+                display: block !important;
+            }
+            .a_bottom_submenu_submenu {
+                position: relative;
+            } 
+            .a_bottom_submenu_submenu_submenu{
+                width: 230px;
+                height: 450px;
+                
+            }
+            .a_bottom_submenu_submenu > li:first-child > ul{
+                display: block !important;
             }
             @media (min-width: 1400px) {
             .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -164,13 +194,12 @@
                                             </button>
                                         </div>
                                     </div>
-                                    
                                 </form>
                             </div>
                             <div class="col-5 a_tbdr h-100">
                                 <ul class="nav h-100 a_menu">
                                     <li class="nav-item pt-2 h-100 position-relative"style="cursor:pointer">
-                                      <a class="nav-link h-75 pt-2 active bg-white text-primary rounded-1 mt-1 ps-5 pe-5 a_login" aria-current="page" href="#">Login</a>
+                                      <a class="nav-link h-75 pt-1 pb-2 active bg-white text-primary rounded-0 mt-1 ps-5 pe-5 a_login" aria-current="page" href="#">Login</a>
                                       <ul class="nav flex-column a_submenu  bg-white shadow-sm position-absolute d-none">
                                         <div class="arrow-up"></div>
                                         <li>
@@ -214,10 +243,8 @@
                     <div class="container h-100 a_tbdr">
                         <nav class="navbar navbar-expand-lg bg-light h-100 p-0">
                             <div class="container-fluid h-100">
-
-                              
                               <div class="collapse navbar-collapse h-100" id="navbarNav">
-                                <ul class="navbar-nav h-100">
+                                <ul class="navbar-nav h-100 a_bottom_menu">
                                   <li class="nav-item me-4">
                                     <a class="nav-link active h-100" aria-current="page" href="#">
                                         <img class="img-fluid" width="60" src="./Img/header/nav_bottom/1.webp" alt="">
@@ -241,11 +268,78 @@
                                         <img class="img-fluid" width="60" src="./Img/header/nav_bottom/4.webp" alt="">
                                         <br>Fashion
                                     </a>
+                                    <ul class="nav row a_bottom_submenu shadow-sm bg-white d-none position-absolute">
+                                        <li class="col-6 ">
+                                            <ul class="nav flex-column a_bottom_submenu_submenu">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="">Mens Top wear</a>
+                                                    <ul class="p-2 nav flex-column a_bottom_submenu_submenu_submenu position-absolute start-100 top-0 shadow d-none">
+                                                        <li>MORE IN MEN'S TOP WEAR</li>
+                                                    <li  class="nav-item">
+                                                        <a class="nav-link active" href="#">All</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Men's T-Shirts</a>
+                                                    </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="">Mens Bottom wear</a>
+                                                    <ul class="a_bottom_submenu_submenu_submenu position-absolute start-100 top-0 bg-white shadow d-none"></ul>
+
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li class="col-6 ">B</li>
+                                    </ul>
                                   </li>
                                   <li class="nav-item me-4">
                                     <a class="nav-link h-100" aria-current="page" href="#">
                                         <img class="img-fluid" width="60" src="./Img/header/nav_bottom/5.webp" alt="">
                                         <br>Electronics
+                                    </a>
+                                  </li>
+                                  <li class="nav-item me-4">
+                                    <a class="nav-link h-100" aria-current="page" href="#">
+                                        <img class="img-fluid" width="60" src="./Img/header/nav_bottom/5.webp" alt="">
+                                        <br>Home
+                                    </a>
+                                  </li>
+                                  <li class="nav-item me-4">
+                                    <a class="nav-link h-100" aria-current="page" href="#">
+                                        <img class="img-fluid" width="60" src="./Img/header/nav_bottom/5.webp" alt="">
+                                        <br>Appliences
+                                    </a>
+                                  </li>
+                                  <li class="nav-item me-4">
+                                    <a class="nav-link h-100" aria-current="page" href="#">
+                                        <img class="img-fluid" width="60" src="./Img/header/nav_bottom/5.webp" alt="">
+                                        <br>Travel
+                                    </a>
+                                  </li>
+                                  <li class="nav-item me-4">
+                                    <a class="nav-link h-100" aria-current="page" href="#">
+                                        <img class="img-fluid" width="60" src="./Img/header/nav_bottom/5.webp" alt="">
+                                        <br>Beauty,Toy
                                     </a>
                                   </li>
                                 </ul>
@@ -294,7 +388,6 @@
                 </div>
             </footer>
         </div>
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </body>
